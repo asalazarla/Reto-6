@@ -56,8 +56,37 @@ else:
 ```
 
 5.Haga un programa que utilice una función para calcular el valor de un préstamo C usando interés compuesto del i por n meses.
+```python
+def calcular_valor_prestamo(C, i, n):
+    # Fórmula del interés compuesto: A = C * (1 + i)^n
+    valor_prestamo = C * (1 + i)**n
+    return valor_prestamo
+
+# Ejemplo de uso del programa
+C = float(input("Ingrese el monto del préstamo: "))
+i = float(input("Ingrese la tasa de interés anual (en decimal): "))
+n = int(input("Ingrese el número de meses: "))
+
+valor_final = calcular_valor_prestamo(C, i, n)
+print("El valor final del préstamo después de", n, "meses es:", valor_final)
+
+```
 
 6.El número de contagiados de Covid-19 en el país de NuncaLandia se duplica cada día. Hacer un programa que diga el número total de personas que se han contagiado cuando pasen D días a partir de hoy, si el número de contagiados actuales es C.
+```python
+def calcular_contagiados(C, D):
+    # El número de contagiados se duplica cada día
+    contagiados_totales = C * (2 ** D)
+    return contagiados_totales
+
+# Ejemplo de uso del programa
+C = int(input("Ingrese el número actual de contagiados en NuncaLandia: "))
+D = int(input("Ingrese el número de días a partir de hoy: "))
+
+contagiados_totales = calcular_contagiados(C, D)
+print("El número total de personas contagiadas después de", D, "días será:", contagiados_totales)
+
+```
 
 7.Escriba un programa que pida 5 números reales y calcule las siguientes operaciones usando una función para cada una:
 
@@ -69,9 +98,57 @@ else:
 - La potencia del mayor número elevado al menor número
 - La raíz cúbica del menor número
 
+```python
+import statistics
+
+def calcular_promedio(numeros):
+    return sum(numeros) / len(numeros)
+
+def calcular_mediana(numeros):
+    return statistics.median(numeros)
+
+def calcular_promedio_multiplicativo(numeros):
+    producto = 1
+    for num in numeros:
+        producto *= num
+    return producto ** (1 / len(numeros))
+
+def ordenar_ascendente(numeros):
+    return sorted(numeros)
+
+def ordenar_descendente(numeros):
+    return sorted(numeros, reverse=True)
+
+def potencia_mayor_al_menor(numeros):
+    numeros.sort()
+    return numeros[-1] ** numeros[0]
+
+def raiz_cubica_del_menor(numeros):
+    numeros.sort()
+    return numeros[0] ** (1/3)
+
+# Solicitar 5 números al usuario
+numeros = []
+for i in range(5):
+    num = float(input("Ingrese el número {}: ".format(i+1)))
+    numeros.append(num)
+
+# Calcular y mostrar los resultados
+print("El promedio es:", calcular_promedio(numeros))
+print("La mediana es:", calcular_mediana(numeros))
+print("El promedio multiplicativo es:", calcular_promedio_multiplicativo(numeros))
+print("Números ordenados de forma ascendente:", ordenar_ascendente(numeros))
+print("Números ordenados de forma descendente:", ordenar_descendente(numeros))
+print("Potencia del mayor número elevado al menor número:", potencia_mayor_al_menor(numeros))
+print("Raíz cúbica del menor número:", raiz_cubica_del_menor(numeros))
+
+```
+
 8. Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso.
 
-9. Consultar qué es y cómo funciona pip en python.
 
-10. Hacer un listado de módulos populares para python que se puedan instalar com pip y consultar cómo instalarlos.
+
+10. Consultar qué es y cómo funciona pip en python.
+
+11. Hacer un listado de módulos populares para python que se puedan instalar com pip y consultar cómo instalarlos.
 
