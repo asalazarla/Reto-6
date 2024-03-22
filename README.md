@@ -1,10 +1,69 @@
 # Reto-6
 
 1. Dado la figura de la imagen, desarrolle:
+   
 [![img-1.png](https://i.postimg.cc/nVBj1Lc6/img-1.png)](https://postimg.cc/XXNYj458)
 - Una función matemática para calcular el volumen y el área superficial.
 - Cree dos funciones en python para calcular los valores antes establecidos, al ingresar por teclado r1, r2 y h.
+- Revise como utilizar el valor de pi usando import math y math.
+```python
+import math
+
+def volumen_esferoide(r1, r2):
+    return (4/3) * math.pi * r1**2 * r2
+
+def area_esferoide(r1, r2):
+    e = math.sqrt(1 - (r2**2 / r1**2))
+    return 2 * math.pi * r1**2 * (1 + (1 - e**2) / e * math.asinh(e))
+
+def volumen_cono(r, h):
+    return (1/3) * math.pi * r**2 * h
+
+def area_cono(r, h):
+    return math.pi * r * math.sqrt(r**2 + h**2)
+
+# Uso de funciones
+r1 = float(input("Ingrese r1 para el esferoide: "))
+r2 = float(input("Ingrese r2 para el esferoide: "))
+h = float(input("Ingrese h para el cono: "))
+
+print(f"Volumen del esferoide: {volumen_esferoide(r1, r2)}")
+print(f"Área superficial del esferoide: {area_esferoide(r1, r2)}")
+print(f"Volumen del cono: {volumen_cono(r2, h)}")
+print(f"Área superficial del cono (sin base): {area_cono(r2, h)}")
+
+```
+2.Dado la figura de la imagen, desarrolle:
+[![img-2.png](https://i.postimg.cc/N0WdX0pd/img-2.png)](https://postimg.cc/8FmdQT8v)
+
+- Una función matemática para calcular el área y el perímetro.
+- Cree dos funciones en python para calcular los valores antes establecidos, al ingresar por teclado r, a y b.
 - Revise como utilizar el valor de pi usando import math y math.pi
+  
+```python
+import math
+
+def calcular_area(a, b, r):
+    area_rectangulo = a * b
+    area_circulo_completo = math.pi * r**2
+    return area_rectangulo + area_circulo_completo
+
+def calcular_perimetro(a, b, r):
+    perimetro_rectangulo = 2 * (a + b)
+    circunferencia_circulo = 2 * math.pi * r
+    return perimetro_rectangulo - 2 * b + circunferencia_circulo
+
+# Uso de las funciones
+r = float(input("Ingrese el radio r de los semicírculos: "))
+a = float(input("Ingrese el largo a del rectángulo: "))
+b = float(input("Ingrese el ancho b del rectángulo: "))
+
+area = calcular_area(a, b, r)
+perimetro = calcular_perimetro(a, b, r)
+
+print(f"El área de la figura es: {area}")
+print(f"El perímetro de la figura es: {perimetro}")
+```
 
 3. Diseñe una función que calcule la cantidad de carne de aves en kilos si se tienen N gallinas, M gallos y K pollitos cada uno pesando 6 kilos, 7 kilos y 1 kilo respectivamente.
 
