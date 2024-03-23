@@ -257,12 +257,12 @@ def raiz_cubica_del_menor(numeros):
 
 El archivo está adjunto con los demás.
 
-10. Consultar qué es y cómo funciona pip en python.
+9. Consultar qué es y cómo funciona pip en python.
 
 PIP es un sistema de gestión de paquetes para Python que permite instalar, actualizar y manejar bibliotecas y dependencias que no están incluidas en la biblioteca estándar de Python.Cuando se instala un paquete con PIP, este busca el paquete en el Python Package Index (PyPI), descarga el paquete y sus dependencias, y los instala en el sistema.
 PyPI es un repositorio de software para el lenguaje de programación Python que ayuda a los usuarios a encontrar y a instalar software desarrollado y compartido por la comunidad de Python. pip también maneja la compilación de algunos paquetes si es necesario, gestiona versiones y asegura que se instalen las versiones de los paquetes compatibles entre sí, basándose en los requerimientos de cada paquete.
 
-12. Hacer un listado de módulos populares para python que se puedan instalar com pip y consultar cómo instalarlos.
+10. Hacer un listado de módulos populares para python que se puedan instalar com pip y consultar cómo instalarlos.
 
 Existen diversos paquetes, con distintas funciones y se instalan proporcionando el comando pip install seguido del nombre del paquete, como por ejemplo:
 
@@ -294,8 +294,57 @@ pip install scikit-learn
 ``````python
 pip install beautifulsoup4
 ```
+Estos son solo algunos de los miles de los módulos de python. ;)
 
-pip install scikit-learn
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Además, para cumplir el retp se requiere hacer los ejercicios propuestos en clase.
+
+- Realice un programa que ingrese dos masas y la distancia que las separa y calcule la fuerza de gravedad entre ellas. Resuelva usando una función.
+
+```python
+G : float = 6.67384e-11 # Constante de Cavendish [Nm^2/kg^2]
 ```
-Además, se requiere hacer los ejercicios propuestos en clase.
+
+```python
+# Definición de la función para calcular la fuerza de gravedad
+def calcular_fuerza_gravitacional(m1, m2, r):
+    G = 6.67384e-11  # Constante de gravitación universal
+    return G * m1 * m2 / r**2
+
+# Función principal
+def main():
+    m1 = float(input("Ingrese la masa del primer objeto (en kilogramos): "))
+    m2 = float(input("Ingrese la masa del segundo objeto (en kilogramos): "))
+    r = float(input("Ingrese la distancia entre los objetos (en metros): "))
+    
+    fuerza = calcular_fuerza_gravitacional(m1, m2, r)
+    print(f"La fuerza de gravedad entre los objetos es de {fuerza} Newtons")
+
+# Punto de entrada del script
+if __name__ == "__main__":
+    main()
+```
+
+- Uno de los módulos que trae python es math, hacer un porgrama en Python importando math y usar 5 de las funciones incluidas en este módulo.
+
+```python
+def elevar_cuadrado(x: float) -> float:
+    return x**2
+
+def sumar_dos_numeros(x: float, y: float) -> float:
+    return x + y
+
+def main():
+    x = float(input("Ingrese un numero real para x: "))
+    x_squared = elevar_cuadrado(x)
+    print("El cuadrado de " + str(x) + " es " + str(x_squared))
+
+    y = float(input("Ingrese un numero real para y: "))
+    suma = sumar_dos_numeros(x, y)
+    print("La suma de " + str(x) + " y " + str(y) + " es " + str(suma))
+
+if __name__ == "__main__":
+    main()
+```
 
