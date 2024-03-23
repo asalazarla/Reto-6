@@ -259,5 +259,43 @@ El archivo está adjunto con los demás.
 
 10. Consultar qué es y cómo funciona pip en python.
 
-11. Hacer un listado de módulos populares para python que se puedan instalar com pip y consultar cómo instalarlos.
+PIP es un sistema de gestión de paquetes para Python que permite instalar, actualizar y manejar bibliotecas y dependencias que no están incluidas en la biblioteca estándar de Python.Cuando se instala un paquete con PIP, este busca el paquete en el Python Package Index (PyPI), descarga el paquete y sus dependencias, y los instala en el sistema.
+PyPI es un repositorio de software para el lenguaje de programación Python que ayuda a los usuarios a encontrar y a instalar software desarrollado y compartido por la comunidad de Python. pip también maneja la compilación de algunos paquetes si es necesario, gestiona versiones y asegura que se instalen las versiones de los paquetes compatibles entre sí, basándose en los requerimientos de cada paquete.
+
+12. Hacer un listado de módulos populares para python que se puedan instalar com pip y consultar cómo instalarlos.
+
+Existen diversos paquetes, con distintas funciones y se instalan proporcionando el comando pip install seguido del nombre del paquete, como por ejemplo:
+
+- Desarrollo web:
+Flask: un micro framework para desarrollo web en Python.
+```python
+pip install Flask
+```
+
+- Análisis de datos:
+Matplotlib: una biblioteca de trazado para la visualización de datos en Python.
+```python
+pip install matplotlib
+```
+
+Scikit-learn: herramientas simples y eficientes para el análisis de datos y la minería de datos.
+```python
+pip install scikit-learn
+```
+
+-Automatización y Sripts:
+Selenium: una herramienta para automatizar navegadores web.
+```python
+pip install seleniumn
+```
+
+Beautiful Soup: una biblioteca que facilita raspar información de páginas web.
+pip install scikit-learn
+``````python
+pip install beautifulsoup4
+```
+
+pip install scikit-learn
+```
+Además, se requiere hacer los ejercicios propuestos en clase.
 
