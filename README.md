@@ -7,14 +7,24 @@
 - Cree dos funciones en python para calcular los valores antes establecidos, al ingresar por teclado r1, r2 y h.
 - Revise como utilizar el valor de pi usando import math y math.
 ```python
+
 import math
 
 def volumen_esferoide(r1, r2):
     return (4/3) * math.pi * r1**2 * r2
 
 def area_esferoide(r1, r2):
-    e = math.sqrt(1 - (r2**2 / r1**2))
-    return 2 * math.pi * r1**2 * (1 + (1 - e**2) / e * math.asinh(e))
+    if r1 > r2:
+        # Esferoide oblato
+        e = math.sqrt(1 - (r2**2 / r1**2))
+    else:
+        # Esferoide prolate
+        e = math.sqrt((r2**2 / r1**2) - 1)
+    if r1 != r2:
+        factor = (1 - e**2) / e * math.asinh(e)
+    else:
+        factor = 0
+    return 2 * math.pi * r1**2 * (1 + factor)
 
 def volumen_cono(r, h):
     return (1/3) * math.pi * r**2 * h
@@ -31,6 +41,7 @@ print(f"Volumen del esferoide: {volumen_esferoide(r1, r2)}")
 print(f"Área superficial del esferoide: {area_esferoide(r1, r2)}")
 print(f"Volumen del cono: {volumen_cono(r2, h)}")
 print(f"Área superficial del cono (sin base): {area_cono(r2, h)}")
+
 
 ```
 2.Dado la figura de la imagen, desarrolle:
